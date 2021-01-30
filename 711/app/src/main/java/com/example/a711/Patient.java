@@ -1,4 +1,5 @@
 package com.example.a711;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Patient {
@@ -10,11 +11,11 @@ public class Patient {
     public String email;
     public Doctor doctor;
     // Current Patient Condition
-    public Prescription[] prescriptions = new Prescription[];
-    public ArrayList[] condition = new ArrayList;
-    public ArrayList[] symptoms = new ArrayList[];
+    public ArrayList<Prescription> prescriptions = new ArrayList();
+    public ArrayList<String> condition = new ArrayList();
+    public ArrayList<String> symptoms = new ArrayList();
     // Patient Notes to be viewed by the Doctor
-    public HashMap<String,String> patientNotes= new HashMap<String, String>;
+    public HashMap<String,String> patientNotes= new HashMap<String, String>();
 
     // Constructor
     public Patient(String id, String name, int age, String email){
@@ -60,24 +61,30 @@ public class Patient {
         this.doctor = doctor;
     }
 
-    public Prescription[] getPrescriptions(){
+    public ArrayList<Prescription> getPrescriptions(){
         return prescriptions;
     }
-    public void setPrescriptions(Prescription[] prescriptions){
+    public void setPrescriptions(ArrayList<Prescription> prescriptions){
         this.prescriptions = prescriptions;
     }
+    public void addPrescription (Prescription prescription){
+        prescriptions.add(prescription);
+    }
+    public void removePrescription (Prescription prescription){
+        prescriptions.remove(prescription);
+    }
 
-    public ArrayList[] getCondition(){
+    public ArrayList<String> getCondition(){
         return condition;
     }
-    public void setCondition(ArrayList[] condition){
+    public void setCondition(ArrayList<String> condition){
         this.condition = condition;
     }
 
-    public ArrayList[] getSymptoms(){
+    public ArrayList<String> getSymptoms(){
         return symptoms;
     }
-    public void setSymptoms(ArrayList[] symptoms){
+    public void setSymptoms(ArrayList<String> symptoms){
         this.symptoms = symptoms;
     }
 
