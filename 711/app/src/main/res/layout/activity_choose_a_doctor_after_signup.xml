@@ -31,7 +31,7 @@
     <Spinner
         android:id="@+id/ChooseADoctorAfterSignupSpinner"
         android:layout_width="305dp"
-        android:layout_height="35dp"
+        android:layout_height="49dp"
         app:layout_constraintBottom_toTopOf="@+id/ChooseADoctorAfterSignupDone"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

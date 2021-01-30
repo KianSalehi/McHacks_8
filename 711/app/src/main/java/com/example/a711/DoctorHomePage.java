@@ -18,7 +18,7 @@ public class DoctorHomePage extends AppCompatActivity implements AdapterView.OnI
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_doctor_home_page);
         Spinner patientList = findViewById(R.id.DoctorHomePagePatientList);
         for(int i=0; i<patients.size();i++){
             patientNames.add(patients.get(i).getName());
