@@ -1,5 +1,6 @@
 package com.example.a711;
 
+
 public class Appointment {
 
     // Appointment informations
@@ -32,10 +33,10 @@ public class Appointment {
         this.doctor = doctor;
     }
 
-    public Date getDate() {
+    public String getDate() {
         return date;
     }
-    public void setDate(Date date) {
+    public void setDate(String date) {
         this.date = date;
     }
 
