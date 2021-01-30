@@ -13,7 +13,7 @@ public class Doctor {
     private String name;
     private ArrayList<Patient> patientList;
 
-    private Doctor(String id, String name){
+    public Doctor(String id, String name){
         this.setId(id);
         this.setName(name);
         this.patientList = new ArrayList<>();
