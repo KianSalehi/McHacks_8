@@ -30,6 +30,13 @@ public class PatientSignup extends AppCompatActivity {
         final TextView email = (TextView) findViewById(R.id.PatientSignupEmail);
         final TextView password = (TextView) findViewById(R.id.PatientSignupPass);
         final TextView name = (TextView) findViewById(R.id.PatientSignupFirstLastName);
+        TextView logIn = (TextView) findViewById(R.id.PatientSignupLogin);
+        logIn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(PatientSignup.this, LoginPage.class));
+            }
+        });
         signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -51,7 +58,7 @@ public class PatientSignup extends AppCompatActivity {
                     .setDisplayName(name).build();
             currentUser.updateProfile(profileUpdates);
             Toast.makeText(this, "You Signed In successfully!", Toast.LENGTH_LONG).show();
-            startActivity(new Intent(PatientSignup.this, PatientHomePage.class));
+            startActivity(new Intent(PatientSignup.this, ChooseADoctorAfterSignup.class));
     }
         else{
             Toast.makeText(this, "Something went wrong please check your email and password", Toast.LENGTH_SHORT).show();

@@ -9,16 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PatientHomePage"></activity>
+        <activity android:name=".ChooseADoctorAfterSignup"></activity>
+        <activity android:name=".PatientHomePage" />
         <activity android:name=".PatientSignup" />
-        <activity android:name=".LoginPage" >
+        <activity android:name=".LoginPage">
             <intent-filter>
                 <action android:name="package.LoginPage" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".DoctorHomePage"/>
+        <activity android:name=".DoctorHomePage" />
     </application>
 
 </manifest>

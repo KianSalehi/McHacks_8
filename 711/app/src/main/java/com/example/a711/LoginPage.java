@@ -17,6 +17,8 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
+import org.w3c.dom.Text;
+
 public class LoginPage extends AppCompatActivity {
     private static final String TAG = "LoginPage.java :";
     private FirebaseAuth mAuth;
@@ -30,6 +32,13 @@ public class LoginPage extends AppCompatActivity {
         final TextView email = (TextView) findViewById(R.id.LoginPageEmail);
         final TextView pass = (TextView) findViewById(R.id.LoginPagePassword);
         Button loginDoctor = (Button) findViewById(R.id.LoginPageDoctorLogin);
+        TextView signUp = (TextView) findViewById(R.id.LoginPageSignup);
+        signUp.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(LoginPage.this, PatientSignup.class));
+            }
+        });
         loginDoctor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -44,12 +53,13 @@ public class LoginPage extends AppCompatActivity {
         });
 
     }
+    //Need to change this late!!!!!
     @Override
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI accordingly.
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
+
     }
 
     private void updateUI(FirebaseUser currentUser) {
