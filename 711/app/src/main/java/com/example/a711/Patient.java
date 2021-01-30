@@ -9,14 +9,16 @@ public class Patient {
     private int age;
     private String email;
     private Doctor doctor;
+    private MedicalRecord medicalRecord;
 
     // Constructor
-    public Patient(String id, String name, int age, String email){
-        this.setId(id);
-        this.setName(name);
-        this.setEmail(email);
-        this.setAge(age);
-    };
+    public Patient(String id, String name, int age, String email) {
+        this.id = id;
+        this.name = name;
+        this.age = age;
+        this.email = email;
+        this.medicalRecord = new MedicalRecord;
+    }
 
     // Getter Setter
     public String getId(){
@@ -53,5 +55,13 @@ public class Patient {
     public void setDoctor(Doctor doctor){
         this.doctor = doctor;
     }
+
+    public MedicalRecord getMedicalRecord() {
+        return medicalRecord;
+    }
+    public void setMedicalRecord(MedicalRecord medicalRecord) {
+        this.medicalRecord = medicalRecord;
+    }
+
 
 }
