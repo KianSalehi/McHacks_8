@@ -11,14 +11,14 @@
         android:theme="@style/AppTheme">
         <activity android:name=".PatientHomePage"></activity>
         <activity android:name=".PatientSignup" />
-        <activity android:name=".LoginPage" />
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity android:name=".LoginPage" >
+            <intent-filter>
+                <action android:name="package.LoginPage" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        <activity android:name=".DoctorHomePage">
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
         </activity>
+        <activity android:name=".DoctorHomePage"/>
     </application>
 
 </manifest>
