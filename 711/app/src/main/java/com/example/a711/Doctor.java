@@ -43,13 +43,13 @@ public class Doctor {
     public void removePatient(Patient patient){
         patientList.remove(patient);
     }
-    public void renewPrescription(Patient patient, Prescription prescription, LocalTime date){
-        LocalTime today = now();
+    public void renewPrescription(Patient patient, Prescription prescription, LocalDate date){
+        LocalDate today = LocalDate.now();
         Prescription newPrescription = new Prescription(prescription.getDrug(),today,date,this);
-        patient.addPrescription(newPrescription);
+        patient.getMedicalRecord().addPrescription(newPrescription);
     }
     public void newPrescription(Prescription prescription, Patient patient){
-        patient.addPrescription(prescription);
+        patient.getMedicalRecord().addPrescription(prescription);
     }
 
 }
