@@ -6,7 +6,7 @@
     android:layout_height="match_parent">
 
     <TextView
-        android:id="@+id/PatientTitle"
+        android:id="@+id/doctorHomePagePatientTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
@@ -14,35 +14,35 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.089"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/doctorHomePageDate" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/doctorHomePageLogoutButton"
         android:layout_width="96dp"
         android:layout_height="37dp"
         android:text="Log out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.8"
-        app:layout_constraintStart_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toEndOf="@+id/doctorHomePageDate"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.04" />
 
     <TextView
-        android:id="@+id/Doctor_name"
+        android:id="@+id/doctorHomePageDoctorName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:text="textView"
-        app:layout_constraintBottom_toTopOf="@+id/PatientTitle"
+        app:layout_constraintBottom_toTopOf="@+id/doctorHomePagePatientTitle"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.086"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/doctorHomePageDate"
         app:layout_constraintVertical_bias="0.0" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/doctorHomePageDate"
         android:layout_width="119dp"
         android:layout_height="43dp"
         android:text="TextView"
@@ -54,7 +54,7 @@
         app:layout_constraintVertical_bias="0.05" />
 
     <Spinner
-        android:id="@+id/spinner2"
+        android:id="@+id/doctorHomePagePatientList"
         android:layout_width="352dp"
         android:layout_height="29dp"
         android:layout_marginTop="24dp"
@@ -62,7 +62,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientTitle"
+        app:layout_constraintTop_toBottomOf="@+id/doctorHomePagePatientTitle"
         app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
