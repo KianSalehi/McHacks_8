@@ -78,15 +78,14 @@ public class ChooseADoctorAfterSignup extends AppCompatActivity implements Adapt
                 userMap.put("Name", user.getDisplayName());
                 userMap.put("Email", user.getEmail());
                 userMap.put("Age", null);
-                db.collection("patient")
-                        .add(userMap)
-                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                db.collection("patient").document(user.getUid()).set(userMap)
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
-                            public void onSuccess(DocumentReference documentReference) {
-                                Log.d(TAG, "DocumentSnapshot added with ID: " + documentReference.getId());
+                            public void onSuccess(Void aVoid) {
+                                Log.d(TAG, "DocumentSnapshot added with ID: " + user.getUid());
                                 db.collection("doctors").document(patientDoctor.getId())
                                         .collection("Doctor Patients")
-                                        .document(documentReference.getId()).set(userMap).addOnSuccessListener(new OnSuccessListener<Void>() {
+                                        .document(user.getUid()).set(userMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
                                        startActivity(new Intent(ChooseADoctorAfterSignup.this, PatientHomePage.class));
