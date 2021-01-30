@@ -1,15 +1,18 @@
 package com.example.a711;
 
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Doctor {
 
-    public String id;
-    public String name;
-    public Patient[] patients = new Patient[];
-
+    private String id;
+    private String name;
+    private ArrayList<Patient> patientList;
 
     private Doctor(String id, String name){
         this.setId(id);
         this.setName(name);
+        this.patientList = new ArrayList<>();
     };
 
     public String getId(){
@@ -26,10 +29,18 @@ public class Doctor {
         this.name = name;
     }
 
-    public Patient[] getPatients() {
-        return patients;
+    public ArrayList<Patient> getPatientList() {
+        return patientList;
     }
-    public void setPatients(Patient[] patients) {
-        this.patients = patients;
+
+    public void addPatient(Patient patient){
+        patientList.add(patient);
     }
+    public void removePatient(Patient patient){
+        patientList.remove(patient);
+    }
+    public void renewPrescription(Patient patient, Prescription prescription, Date date){
+
+    }
+
 }
