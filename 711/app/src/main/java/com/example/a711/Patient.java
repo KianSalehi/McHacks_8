@@ -17,7 +17,7 @@ public class Patient {
         this.name = name;
         this.age = age;
         this.email = email;
-        this.medicalRecord = new MedicalRecord;
+        this.medicalRecord = new MedicalRecord();
     }
 
     // Getter Setter

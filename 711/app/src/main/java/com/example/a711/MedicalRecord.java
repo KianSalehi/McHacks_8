@@ -18,8 +18,7 @@ public class MedicalRecord {
     private HashMap<String,String> doctorNotes;
 
     // Constructor
-    public MedicalRecord(Patient patient) {
-        this.patient = patient;
+    public MedicalRecord() {
         this.prescriptions = new ArrayList();
         this.condition = new ArrayList();
         this.symptoms = new ArrayList();
