@@ -1,5 +1,5 @@
 package com.example.a711;
-import java.util.Hashmap;
+import java.util.HashMap;
 
 public class Patient {
 
@@ -11,16 +11,17 @@ public class Patient {
     public Doctor doctor;
     // Current Patient Condition
     public Prescription[] prescriptions = new Prescription[];
-    public String[] condition = new String[];
-    public String[] symptoms = new String[];
+    public ArrayList[] condition = new ArrayList;
+    public ArrayList[] symptoms = new ArrayList[];
     // Patient Notes to be viewed by the Doctor
-    public Hashmap<String,String> patientNotes= new Hashmap<String, String>;
+    public HashMap<String,String> patientNotes= new HashMap<String, String>;
 
     // Constructor
-    public Patient(String id, String name, String email){
+    public Patient(String id, String name, int age, String email){
         this.setId(id);
         this.setName(name);
         this.setEmail(email);
+        this.setAge(age);
     };
 
     // Getter Setter
@@ -66,19 +67,20 @@ public class Patient {
         this.prescriptions = prescriptions;
     }
 
-    public String[] getCondition(){
+    public ArrayList[] getCondition(){
         return condition;
     }
-    public void setCondition(String[] condition){
+    public void setCondition(ArrayList[] condition){
         this.condition = condition;
     }
 
-    public String[] getSymptoms(){
+    public ArrayList[] getSymptoms(){
         return symptoms;
     }
-    public void setSymptoms(String[] symptoms){
+    public void setSymptoms(ArrayList[] symptoms){
         this.symptoms = symptoms;
     }
+
 
 
 }
