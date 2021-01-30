@@ -1,14 +1,15 @@
 package com.example.a711;
 
+import java.time.LocalTime;
 import java.util.Date;
 
 public class Prescription {
     private String drug;
-    private Date beginDate;
-    private Date endDate;
+    private LocalTime beginDate;
+    private LocalTime endDate;
     private Doctor doctor;
 
-    public Prescription(String drug, Date beginDate, Date endDate, Doctor doctor){
+    public Prescription(String drug, LocalTime beginDate, LocalTime endDate, Doctor doctor){
         this.setDrug(drug);
         this.setBeginDate(beginDate);
         this.setEndDate(endDate);
@@ -17,10 +18,10 @@ public class Prescription {
     public String getDrug(){
         return this.drug;
     }
-    public Date getBeginDate(){
+    public LocalTime getBeginDate(){
         return this.beginDate;
     }
-    public Date getEndDate(){
+    public LocalTime getEndDate(){
         return this.endDate;
     }
     public Doctor getDoctor(){
@@ -29,10 +30,10 @@ public class Prescription {
     public void setDrug(String drug){
         this.drug=drug;
     }
-    public void setBeginDate(Date beginDate){
+    public void setBeginDate(LocalTime beginDate){
         this.beginDate=beginDate;
     }
-    public void setEndDate(Date endDate){
+    public void setEndDate(LocalTime endDate){
         this.endDate=endDate;
     }
     public void setDoctor(Doctor doctor){
