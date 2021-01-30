@@ -6,19 +6,25 @@ import java.util.HashMap;
 public class MedicalRecord {
 
     private Patient patient;
+
     // Current Patient Condition
-    private ArrayList<Prescription> prescriptions = new ArrayList();
-    private ArrayList<String> condition = new ArrayList();
-    private ArrayList<String> symptoms = new ArrayList();
+    private ArrayList<Prescription> prescriptions;
+    private ArrayList<String> condition;
+    private ArrayList<String> symptoms;
 
     // Patient Notes to be viewed by the Doctor
-    private HashMap<String,String> patientNotes= new HashMap();
+    private HashMap<String,String> patientNotes;
     // Doctor Notes to keep track of patient
-    private HashMap<String,String> doctorNotes= new HashMap();
+    private HashMap<String,String> doctorNotes;
 
     // Constructor
     public MedicalRecord(Patient patient) {
         this.patient = patient;
+        this.prescriptions = new ArrayList();
+        this.condition = new ArrayList();
+        this.symptoms = new ArrayList();
+        this.patientNotes= new HashMap();
+        this.doctorNotes= new HashMap();
     }
 
     // Getter Setter
