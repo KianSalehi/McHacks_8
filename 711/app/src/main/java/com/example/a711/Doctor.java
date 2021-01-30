@@ -4,6 +4,7 @@ public class Doctor {
 
     public String id;
     public String name;
+    public Patient[] patients = new Patient[];
 
 
     private Doctor(String id, String name){
@@ -23,5 +24,12 @@ public class Doctor {
     }
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Patient[] getPatients() {
+        return patients;
+    }
+    public void setPatients(Patient[] patients) {
+        this.patients = patients;
     }
 }
