@@ -96,8 +96,8 @@ public class Patient {
     public void addSymptoms(String symptom) {
         this.symptoms.add(symptom);
     }
-    public void removeSymptos(String symptom){
-        this.symptom.remove(symptom);
+    public void removeSymptoms(String symptom){
+        this.symptoms.remove(symptom);
     }
 
 
