@@ -5,17 +5,17 @@ import java.util.HashMap;
 public class Patient {
 
     // Patient informtaions
-    public String id;
-    public String name;
-    public int age;
-    public String email;
-    public Doctor doctor;
+    private String id;
+    private String name;
+    private int age;
+    private String email;
+    private Doctor doctor;
     // Current Patient Condition
-    public ArrayList<Prescription> prescriptions = new ArrayList();
-    public ArrayList<String> condition = new ArrayList();
-    public ArrayList<String> symptoms = new ArrayList();
+    private ArrayList<Prescription> prescriptions = new ArrayList();
+    private ArrayList<String> condition = new ArrayList();
+    private ArrayList<String> symptoms = new ArrayList();
     // Patient Notes to be viewed by the Doctor
-    public HashMap<String,String> patientNotes= new HashMap<String, String>();
+    private HashMap<String,String> patientNotes= new HashMap();
 
     // Constructor
     public Patient(String id, String name, int age, String email){
@@ -40,24 +40,24 @@ public class Patient {
         this.name = name;
     }
 
-    public int getAge() {
+    public int getAge(){
         return age;
     }
-    public void setAge(int age) {
+    public void setAge(int age){
         this.age = age;
     }
 
     public String getEmail(){
         return this.email;
     }
-    public void setEmail(String email) {
+    public void setEmail(String email){
         this.email = email;
     }
 
     public Doctor getDoctor(){
         return this.doctor;
     }
-    public void setDoctor(Doctor doctor) {
+    public void setDoctor(Doctor doctor){
         this.doctor = doctor;
     }
 
@@ -68,10 +68,10 @@ public class Patient {
         this.prescriptions = prescriptions;
     }
     public void addPrescription (Prescription prescription){
-        prescriptions.add(prescription);
+        this.prescriptions.add(prescription);
     }
     public void removePrescription (Prescription prescription){
-        prescriptions.remove(prescription);
+        this.prescriptions.remove(prescription);
     }
 
     public ArrayList<String> getCondition(){
@@ -80,6 +80,12 @@ public class Patient {
     public void setCondition(ArrayList<String> condition){
         this.condition = condition;
     }
+    public void addCondition(String condition) {
+        this.condition.add(condition);
+    }
+    public void removeCondition(String condition){
+        this.condition.remove(condition);
+    }
 
     public ArrayList<String> getSymptoms(){
         return symptoms;
@@ -87,7 +93,12 @@ public class Patient {
     public void setSymptoms(ArrayList<String> symptoms){
         this.symptoms = symptoms;
     }
-
+    public void addSymptoms(String symptom) {
+        this.symptoms.add(symptom);
+    }
+    public void removeSymptos(String symptom){
+        this.symptom.remove(symptom);
+    }
 
 
 }
