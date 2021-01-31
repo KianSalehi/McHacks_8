@@ -10,11 +10,12 @@
 
     <Button
         android:id="@+id/PrescriptionPageGoBack"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="102dp"
+        android:layout_height="55dp"
         android:background="#FFFFFF"
         android:text="Go back"
         android:textAlignment="center"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -31,7 +32,7 @@
         android:textColor="#000000"
         android:textColorHighlight="#03A9F4"
         android:textColorLink="#03A9F4"
-        android:textCursorDrawable="#03A9F4"
+        android:textCursorDrawable="@android:color/holo_blue_dark"
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/PrescriptionPageGoBack"
         app:layout_constraintEnd_toEndOf="parent"
