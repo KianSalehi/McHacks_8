@@ -33,18 +33,6 @@
         app:layout_constraintTop_toBottomOf="@+id/ChooseYourDoctorSignupPage"
         app:layout_constraintVertical_bias="0.31" />
 
-    <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="119dp"
-        android:layout_height="115dp"
-        app:layout_constraintBottom_toTopOf="@+id/ChooseYourDoctorSignupPage"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.794"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/Man" />
-
     <TextView
         android:id="@+id/ChooseYourDoctorSignupPage"
         android:layout_width="wrap_content"
@@ -59,14 +47,27 @@
         app:layout_constraintVertical_bias="0.3" />
 
     <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="121dp"
-        android:layout_height="116dp"
+        android:id="@+id/imageView11"
+        android:layout_width="146dp"
+        android:layout_height="122dp"
         app:layout_constraintBottom_toTopOf="@+id/ChooseYourDoctorSignupPage"
-        app:layout_constraintEnd_toStartOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="0.54"
+        app:layout_constraintEnd_toStartOf="@+id/imageView12"
+        app:layout_constraintHorizontal_bias="0.909"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/Woman" />
+        app:srcCompat="@drawable/man" />
+
+    <ImageView
+        android:id="@+id/imageView12"
+        android:layout_width="139dp"
+        android:layout_height="122dp"
+        app:layout_constraintBottom_toTopOf="@+id/ChooseYourDoctorSignupPage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/woman" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
