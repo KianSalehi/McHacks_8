@@ -38,7 +38,7 @@ public class Doctor {
     }
 
     public void addPatient(Patient patient){
-        patientList.add(patient);
+        patientList.add(new Patient(patient.getId(),patient.getName(),patient.getAge(),patient.getEmail()));
     }
     public void removePatient(Patient patient){
         patientList.remove(patient);
