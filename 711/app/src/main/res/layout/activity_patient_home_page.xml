@@ -4,116 +4,175 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/gradient_background"
     tools:context=".PatientHomePage">
 
     <TextView
         android:id="@+id/PatientHomePagePatientName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="126dp"
+        android:layout_height="35dp"
         android:text="patientName"
-        app:layout_constraintBottom_toTopOf="@+id/PatientHomePagePrescriptionTitle"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHighlight="#03A9F4"
+        android:textColorHint="#000000"
+        android:textColorLink="#03A9F4"
+        android:textCursorDrawable="#03A9F4"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/PatientHomePageDoctorName"
         app:layout_constraintEnd_toStartOf="@+id/PatientHomePageLogout"
-        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintHorizontal_bias="0.784"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientHomePageDate"
-        app:layout_constraintVertical_bias="0.414" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.271" />
 
     <Button
         android:id="@+id/PatientHomePageLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:text="Log Out"
+        android:textAlignment="center"
+        android:textColorHighlight="#03A9F4"
+        android:textColorHint="#000000"
         app:layout_constraintBottom_toTopOf="@+id/PatientHomePageDoctorName"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.909"
-        app:layout_constraintStart_toEndOf="@+id/PatientHomePageDate"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.301" />
+        app:layout_constraintVertical_bias="0.413" />
 
     <TextView
         android:id="@+id/PatientHomePageDoctorName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_width="290dp"
+        android:layout_height="30dp"
         android:text="Your doctor is : doctorName"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHighlight="#03A9F4"
+        android:textColorHint="#000000"
+        android:textColorLink="#03A9F4"
+        android:textCursorDrawable="#03A9F4"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/PatientHomePagePrescriptionTitle"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.159"
-        app:layout_constraintStart_toEndOf="@+id/PatientHomePagePatientName"
-        app:layout_constraintTop_toBottomOf="@+id/PatientHomePageDate"
-        app:layout_constraintVertical_bias="0.414" />
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.796" />
 
     <TextView
         android:id="@+id/PatientHomePagePrescriptionTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_width="140dp"
+        android:layout_height="26dp"
         android:text="Prescription List"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHighlight="#03A9F4"
+        android:textColorHint="#000000"
+        android:textColorLink="#03A9F4"
+        android:textCursorDrawable="#03A9F4"
+        android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/PatientHomePagePrescriptionList"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientHomePageDate"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.955" />
+
+    <Spinner
+        android:id="@+id/PatientHomePagePrescriptionList"
+        android:layout_width="363dp"
+        android:layout_height="41dp"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.263" />
+
+    <Button
+        android:id="@+id/PatientHomePageDetails"
+        android:layout_width="210dp"
+        android:layout_height="45dp"
+        android:background="#FFFFFF"
+        android:text="Prescription Details"
+        android:textAlignment="center"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/PatientHomePageAppointmentTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomePagePrescriptionList"
+        app:layout_constraintVertical_bias="0.238" />
 
     <Button
         android:id="@+id/PatientHomePageAppointmentButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="179dp"
+        android:layout_height="54dp"
+        android:background="#FFFFFF"
         android:text="Make an apointment "
+        android:textAlignment="center"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomePageAppointmentList"
-        app:layout_constraintVertical_bias="0.382" />
-
-    <Spinner
-        android:id="@+id/PatientHomePagePrescriptionList"
-        android:layout_width="358dp"
-        android:layout_height="39dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.339"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.255" />
+        app:layout_constraintVertical_bias="0.336" />
 
     <TextView
         android:id="@+id/PatientHomePageDate"
-        android:layout_width="175dp"
-        android:layout_height="44dp"
+        android:layout_width="98dp"
+        android:layout_height="38dp"
         android:text="date"
-        app:layout_constraintBottom_toTopOf="@+id/PatientHomePagePrescriptionList"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.067"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHighlight="#03A9F4"
+        android:textColorHint="#000000"
+        android:textColorLink="#03A9F4"
+        android:textCursorDrawable="#03A9F4"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toTopOf="@+id/PatientHomePageDoctorName"
+        app:layout_constraintEnd_toStartOf="@+id/PatientHomePagePatientName"
+        app:layout_constraintHorizontal_bias="0.363"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.298" />
+        app:layout_constraintVertical_bias="0.285" />
 
     <TextView
         android:id="@+id/PatientHomePageAppointmentTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="249dp"
+        android:layout_height="28dp"
         android:text="Coming Appointments"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHighlight="#03A9F4"
+        android:textColorHint="#000000"
+        android:textColorLink="#03A9F4"
+        android:textCursorDrawable="#03A9F4"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintHorizontal_bias="0.098"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomePagePrescriptionList"
-        app:layout_constraintVertical_bias="0.201" />
+        app:layout_constraintVertical_bias="0.225" />
 
     <ScrollView
         android:id="@+id/PatientHomePageAppointmentList"
         android:layout_width="376dp"
         android:layout_height="203dp"
         android:layout_marginTop="52dp"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.542"
+        app:layout_constraintHorizontal_bias="0.457"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomePagePrescriptionList"
-        app:layout_constraintVertical_bias="0.342">
+        app:layout_constraintVertical_bias="0.362">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -121,13 +180,4 @@
             android:orientation="vertical" />
     </ScrollView>
 
-    <Button
-        android:id="@+id/PatientHomePageDetails"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Prescription Details"
-        app:layout_constraintBottom_toTopOf="@+id/PatientHomePageAppointmentTitle"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientHomePagePrescriptionList" />
 </androidx.constraintlayout.widget.ConstraintLayout>

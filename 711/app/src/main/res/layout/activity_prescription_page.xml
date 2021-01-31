@@ -4,25 +4,35 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PrescriptionPage">
+    tools:context=".PrescriptionPage"
+    android:background="@drawable/gradient_background"
+    >
 
     <Button
         android:id="@+id/PrescriptionPageGoBack"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:background="#FFFFFF"
         android:text="Go back"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.746" />
+        app:layout_constraintVertical_bias="0.89" />
 
     <TextView
         android:id="@+id/PrescriptionPageTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="303dp"
+        android:layout_height="58dp"
         android:text="Prescription Details"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textColorHighlight="#03A9F4"
+        android:textColorLink="#03A9F4"
+        android:textCursorDrawable="#03A9F4"
+        android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/PrescriptionPageGoBack"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
@@ -32,8 +42,8 @@
 
     <TextView
         android:id="@+id/PrescriptionPageDetails"
-        android:layout_width="165dp"
-        android:layout_height="274dp"
+        android:layout_width="253dp"
+        android:layout_height="340dp"
         android:textAlignment="center"
         app:layout_constraintBottom_toTopOf="@+id/PrescriptionPageGoBack"
         app:layout_constraintEnd_toEndOf="parent"
