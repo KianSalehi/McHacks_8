@@ -32,8 +32,8 @@ import java.util.Map;
 
 
 public class ChooseADoctorAfterSignup extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    Map<String, Object> prescriptionMap = new HashMap<>();
     Map<String, Object> userMap = new HashMap<>();
-    Map<String, Object> doctorMap = new HashMap<>();
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     ArrayList<String> spinnerValueHoldValue = new ArrayList ();
@@ -41,7 +41,7 @@ public class ChooseADoctorAfterSignup extends AppCompatActivity implements Adapt
     ArrayAdapter<String> adapter;
     Spinner DoctorChoice;
     Doctor patientDoctor = null;
-    final String TAG ="ChooseADoctorAfterSignup.java";
+    final String TAG ="ChooseADoctorAfterSignup";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -88,7 +88,24 @@ public class ChooseADoctorAfterSignup extends AppCompatActivity implements Adapt
                                         .document(user.getUid()).set(userMap).addOnSuccessListener(new OnSuccessListener<Void>() {
                                     @Override
                                     public void onSuccess(Void aVoid) {
-                                       startActivity(new Intent(ChooseADoctorAfterSignup.this, PatientHomePage.class));
+                                        prescriptionMap.put("Name", "");
+                                        prescriptionMap.put("Begin","");
+                                        prescriptionMap.put("End","");
+                                        prescriptionMap.put("Doctor", patientDoctor.getName());
+                                        db.collection("patient").document(user.getUid()).collection("Prescription").document("None").set(prescriptionMap)
+                                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                                    @Override
+                                                    public void onSuccess(Void aVoid) {
+                                                        startActivity(new Intent(ChooseADoctorAfterSignup.this, PatientHomePage.class));
+
+                                                    }
+                                                }).addOnFailureListener(new OnFailureListener() {
+                                            @Override
+                                            public void onFailure(@NonNull Exception e) {
+                                                Log.d(TAG, "Could not add prescription");
+                                            }
+                                        });
+
                                     }
                                 }).addOnFailureListener(new OnFailureListener() {
                                     @Override

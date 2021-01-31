@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ChooseADoctorAfterSignup"></activity>
+        <activity android:name=".PrescriptionPage"></activity>
+        <activity android:name=".ChooseADoctorAfterSignup" />
         <activity android:name=".PatientHomePage" />
         <activity android:name=".PatientSignup" />
         <activity android:name=".LoginPage">

@@ -6,11 +6,11 @@ import java.util.Date;
 
 public class Prescription {
     private String drug;
-    private LocalDate beginDate;
-    private LocalDate endDate;
-    private Doctor doctor;
+    private String beginDate;
+    private String endDate;
+    private String doctor;
 
-    public Prescription(String drug, LocalDate beginDate, LocalDate endDate, Doctor doctor){
+    public Prescription(String drug, String beginDate, String endDate, String doctor){
         this.setDrug(drug);
         this.setBeginDate(beginDate);
         this.setEndDate(endDate);
@@ -19,25 +19,25 @@ public class Prescription {
     public String getDrug(){
         return this.drug;
     }
-    public LocalDate getBeginDate(){
+    public String getBeginDate(){
         return this.beginDate;
     }
-    public LocalDate getEndDate(){
+    public String getEndDate(){
         return this.endDate;
     }
-    public Doctor getDoctor(){
+    public String getDoctor(){
         return this.doctor;
     }
     public void setDrug(String drug){
         this.drug=drug;
     }
-    public void setBeginDate(LocalDate beginDate){
+    public void setBeginDate(String beginDate){
         this.beginDate=beginDate;
     }
-    public void setEndDate(LocalDate endDate){
+    public void setEndDate(String endDate){
         this.endDate=endDate;
     }
-    public void setDoctor(Doctor doctor){
+    public void setDoctor(String doctor){
         this.doctor=doctor;
     }
 }

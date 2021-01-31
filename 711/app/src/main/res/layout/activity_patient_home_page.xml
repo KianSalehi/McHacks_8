@@ -25,9 +25,10 @@
         android:text="Log Out"
         app:layout_constraintBottom_toTopOf="@+id/PatientHomePageDoctorName"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.909"
         app:layout_constraintStart_toEndOf="@+id/PatientHomePageDate"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.734" />
+        app:layout_constraintVertical_bias="0.301" />
 
     <TextView
         android:id="@+id/PatientHomePageDoctorName"
@@ -65,7 +66,7 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomePageAppointmentList"
-        app:layout_constraintVertical_bias="0.417" />
+        app:layout_constraintVertical_bias="0.382" />
 
     <Spinner
         android:id="@+id/PatientHomePagePrescriptionList"
@@ -100,23 +101,33 @@
         app:layout_constraintHorizontal_bias="0.059"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomePagePrescriptionList"
-        app:layout_constraintVertical_bias="0.035" />
+        app:layout_constraintVertical_bias="0.201" />
 
     <ScrollView
         android:id="@+id/PatientHomePageAppointmentList"
-        android:layout_width="377dp"
-        android:layout_height="310dp"
+        android:layout_width="376dp"
+        android:layout_height="203dp"
         android:layout_marginTop="52dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.529"
+        app:layout_constraintHorizontal_bias="0.542"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatientHomePagePrescriptionList"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintVertical_bias="0.342">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical" />
     </ScrollView>
+
+    <Button
+        android:id="@+id/PatientHomePageDetails"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Prescription Details"
+        app:layout_constraintBottom_toTopOf="@+id/PatientHomePageAppointmentTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PatientHomePagePrescriptionList" />
 </androidx.constraintlayout.widget.ConstraintLayout>
