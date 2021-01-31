@@ -29,20 +29,21 @@ public class DoctorHomePage extends AppCompatActivity implements AdapterView.OnI
     Spinner patientChoice;
     ArrayAdapter<String> adapter;
     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-    String doctorID= user.getUid();
-    Doctor doctor = new Doctor("","");
-    Patient patient = new Patient("","",0,"");
+    String doctorID = user.getUid();
+    Doctor doctor = new Doctor("", "");
     ArrayList<String> patientNames = new ArrayList<>();
     ArrayList<Patient> patients = new ArrayList<>();
     FirebaseAuth mAuth;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
-    final String TAG ="DoctorHomePage";
+    final String TAG = "DoctorHomePage";
     String doctorName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_doctor_home_page);
+        mAuth = FirebaseAuth.getInstance();
+        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, patientNames);
         DocumentReference docRef = db.collection("doctors").document(doctorID);
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
@@ -60,50 +61,29 @@ public class DoctorHomePage extends AppCompatActivity implements AdapterView.OnI
                 }
                 doctor.setId(doctorID);
                 doctor.setName(doctorName);
-                db.collection("doctors").document(doctorID).collection("Doctor Patients").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                    @Override
-                    public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                        if(task.isSuccessful()){
-                            for(QueryDocumentSnapshot document:task.getResult()) {
-                                patient.setId(document.getId());
-                                patient.setName(document.getData().values().toArray()[4].toString());
-                                patient.setAge(Integer.parseInt(document.getData().values().toArray()[3].toString()));
-                                patient.setEmail(document.getData().values().toArray()[0].toString());
-                                doctor.addPatient(patient);
-                                Log.d("Yas gurl :  ", doctor.getName());
-                            }
-                            mAuth = FirebaseAuth.getInstance();
-                            patientChoice = (Spinner) findViewById(R.id.DoctorHomePagePatientList);
-                            db.collection("doctors").document(doctorID).collection("Doctor Patients").get()
-                                    .addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
-                                        @Override
-                                        public void onComplete(@NonNull Task<QuerySnapshot> task) {
-                                            if (task.isSuccessful()) {
-                                                for (QueryDocumentSnapshot document : task.getResult()) {
-                                                    Log.d(TAG, document.getId() + " => " + document.getData());
-                                                }
-                                                Log.d("doctorName ", doctor.getName());
-                                                for (int i = 0; i < doctor.getPatientList().size(); i++) {
-                                                    patientNames.add(doctor.getPatientList().get(i).getName());
-                                                    Log.d("Successful name: ", patientNames.get(i));
-                                                }
-                                            } else {
-                                                Log.w(TAG, "Error getting documents.", task.getException());
-                                            }
-                                        }
-                                    });
-                        }
-                    }
-                });
+
             }
         });
-
-        adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, patientNames);
+        db.collection("doctors").document(doctorID).collection("Doctor Patients").get().addOnCompleteListener(new OnCompleteListener<QuerySnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<QuerySnapshot> task) {
+                if (task.isSuccessful()) {
+                    for (QueryDocumentSnapshot document : task.getResult()) {
+                        Patient patient = new Patient(document.getId(),document.getData().values().toArray()[4].toString(),
+                                Integer.parseInt(document.getData().values().toArray()[3].toString()),document.getData().values().toArray()[0].toString());
+                        patientNames.add(patient.getName());
+                        doctor.addPatient(patient);
+                        adapter.notifyDataSetChanged();
+                    }
+                }
+            }
+        });
+        patientChoice = (Spinner) findViewById(R.id.DoctorHomePagePatientList);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         patientChoice.setAdapter(adapter);
-        patientChoice.setSelection(1);
+        patientChoice.setSelection(0);
         patientChoice.setOnItemSelectedListener(this);
-        Button logOut= (Button) findViewById(R.id.DoctorHomePageLogoutButton);
+        Button logOut = (Button) findViewById(R.id.DoctorHomePageLogoutButton);
         logOut.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,12 +92,13 @@ public class DoctorHomePage extends AppCompatActivity implements AdapterView.OnI
             }
         });
     }
+
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-        String namePatient= patientChoice.getSelectedItem().toString();
+        String namePatient = patientChoice.getSelectedItem().toString();
         Patient selectedPatient = null;
-        for(int i=0;i<patients.size();i++){
-            if (patients.get(i).getName().equals(namePatient)){
+        for (int i = 0; i < patients.size(); i++) {
+            if (patients.get(i).getName().equals(namePatient)) {
                 selectedPatient = patients.get(i); //Temporary variable containing selected patient info
                 break;
             }

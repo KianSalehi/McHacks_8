@@ -18,8 +18,8 @@
 
     <Button
         android:id="@+id/DoctorHomePageLogoutButton"
-        android:layout_width="96dp"
-        android:layout_height="37dp"
+        android:layout_width="99dp"
+        android:layout_height="51dp"
         android:text="Log out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
