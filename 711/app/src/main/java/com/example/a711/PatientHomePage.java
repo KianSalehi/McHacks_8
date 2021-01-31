@@ -27,11 +27,9 @@ import com.google.firebase.firestore.QuerySnapshot;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.HashMap;
-import java.util.Map;
+
 
 public class PatientHomePage extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
-    Map<String, Object> userMap = new HashMap<>();
     ArrayList<String> spinnerValueHold = new ArrayList<>();
     ArrayList<Prescription> prescriptionList = new ArrayList<>();
     ArrayAdapter<String> adapter;

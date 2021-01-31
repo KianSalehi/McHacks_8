@@ -6,10 +6,21 @@
     android:layout_height="match_parent">
 
     <TextView
+        android:id="@+id/textView8"
+        android:layout_width="140dp"
+        android:layout_height="31dp"
+        android:text="End Date"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/DoctorHomePageEndDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoctorHomePageStartDate" />
+
+    <TextView
         android:id="@+id/DoctorHomePagePatientTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="60dp"
+        android:layout_marginTop="72dp"
         android:text="Patient list"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.089"
@@ -30,8 +41,8 @@
 
     <TextView
         android:id="@+id/DoctorHomePageDoctorName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="156dp"
+        android:layout_height="36dp"
         android:layout_marginTop="20dp"
         android:text="textView"
         app:layout_constraintBottom_toTopOf="@+id/DoctorHomePagePatientTitle"
@@ -64,5 +75,75 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/DoctorHomePagePatientTitle"
         app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="225dp"
+        android:layout_height="24dp"
+        android:text="Name of Prescription"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/DoctorHomePagePrescription"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoctorHomePagePatientList" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="138dp"
+        android:layout_height="24dp"
+        android:text="Start Date"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/DoctorHomePageStartDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoctorHomePagePrescription" />
+
+    <Button
+        android:id="@+id/DoctorHomePageSubmit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Prescription"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoctorHomePagePatientList"
+        app:layout_constraintVertical_bias="0.819" />
+
+    <EditText
+        android:id="@+id/DoctorHomePagePrescription"
+        android:layout_width="316dp"
+        android:layout_height="49dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/DoctorHomePageStartDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoctorHomePagePatientList" />
+
+    <EditText
+        android:id="@+id/DoctorHomePageStartDate"
+        android:layout_width="312dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/DoctorHomePageEndDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoctorHomePagePatientList"
+        app:layout_constraintVertical_bias="0.755" />
+
+    <EditText
+        android:id="@+id/DoctorHomePageEndDate"
+        android:layout_width="316dp"
+        android:layout_height="52dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/DoctorHomePageSubmit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/DoctorHomePagePatientList"
+        app:layout_constraintVertical_bias="0.839" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
