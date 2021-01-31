@@ -143,8 +143,10 @@
         android:id="@+id/imageView"
         android:layout_width="229dp"
         android:layout_height="174dp"
-        app:srcCompat="@drawable/logo"
-        tools:layout_editor_absoluteX="91dp"
-        tools:layout_editor_absoluteY="551dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/LoginPageSignup"
+        app:srcCompat="@drawable/logo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
