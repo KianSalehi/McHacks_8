@@ -56,8 +56,8 @@ public class PatientHomePage extends AppCompatActivity implements AdapterView.On
                 if (task.isSuccessful()){
                     for (QueryDocumentSnapshot document: task.getResult()){
                         Prescription prescription = new Prescription(document.getId(),
-                                document.getData().values().toArray()[1].toString(),document.getData().values().toArray()[2].toString(),
-                                document.getData().values().toArray()[3].toString());
+                                document.getData().values().toArray()[1].toString(),document.getData().values().toArray()[3].toString(),
+                                document.getData().values().toArray()[2].toString());
                         prescriptionList.add(prescription);
                         spinnerValueHold.add(prescription.getDrug());
                         adapter.notifyDataSetChanged();
@@ -91,15 +91,17 @@ public class PatientHomePage extends AppCompatActivity implements AdapterView.On
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(PatientHomePage.this,PrescriptionPage.class);
-                intent.putExtra("Name", prescriptionDetails.getDrug());
-                intent.putExtra("Begin", prescriptionDetails.getBeginDate());
-                intent.putExtra("End", prescriptionDetails.getEndDate());
-                intent.putExtra("Doctor", prescriptionDetails.getDoctor());
+                ArrayList<String> info = new ArrayList<>();
+                info.add(prescriptionDetails.getDrug());
+                info.add(prescriptionDetails.getBeginDate());
+                info.add(prescriptionDetails.getEndDate());
+                info.add(prescriptionDetails.getDoctor());
+                intent.putExtra("Info", info);
                 startActivity(intent);
             }
         });
         final TextView doctorName = (TextView) findViewById(R.id.PatientHomePageDoctorName);
-        DocumentReference docRef = db.collection("Patient").document(user.getUid());
+        DocumentReference docRef = db.collection("patient").document(user.getUid());
         docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
             @Override
             public void onComplete(@NonNull Task<DocumentSnapshot> task) {
@@ -107,9 +109,10 @@ public class PatientHomePage extends AppCompatActivity implements AdapterView.On
                     DocumentSnapshot document = task.getResult();
                     if (document.exists()) {
                         Log.d(TAG, "DocumentSnapshot data: " + document.getData());
-                        doctorName.setText(document.getData().values().toArray()[2].toString());
+                        doctorName.setText("Your Doctor: "+document.getData().values().toArray()[2].toString());
                     } else {
                         Log.d(TAG, "No such document");
+                        Log.d(TAG,user.getUid());
                     }
                 } else {
                     Log.d(TAG, "get failed with ", task.getException());

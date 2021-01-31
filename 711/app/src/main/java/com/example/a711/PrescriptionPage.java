@@ -8,16 +8,15 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class PrescriptionPage extends AppCompatActivity {
-    Bundle extras = getIntent().getExtras();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Bundle extras = getIntent().getExtras();
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_prescription_page);
-        String name= extras.getString("Name");
-        String begin= extras.getString("Begin");
-        String end = extras.getString("End");
-        String doctor = extras.getString("Doctor");
+        ArrayList<String> info= extras.getStringArrayList("Info");
         Button goBack = (Button) findViewById(R.id.PrescriptionPageGoBack);
         TextView details = (TextView) findViewById(R.id.PrescriptionPageDetails);
         goBack.setOnClickListener(new View.OnClickListener() {
@@ -26,6 +25,6 @@ public class PrescriptionPage extends AppCompatActivity {
                 startActivity(new Intent(PrescriptionPage.this, PatientHomePage.class));
             }
         });
-        details.setText("Name: "+name+"\nBegin Date: "+begin+"\nEnd Date: "+end+"\nDoctor: "+doctor);
+        details.setText("Name: "+ info.get(0) +"\nBegin Date: "+info.get(1)+"\nEnd Date: "+info.get(2)+"\nDoctor: "+info.get(3));
     }
 }

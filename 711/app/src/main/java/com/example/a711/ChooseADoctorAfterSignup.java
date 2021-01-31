@@ -72,7 +72,6 @@ public class ChooseADoctorAfterSignup extends AppCompatActivity implements Adapt
         done.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Log.d("Done:","Submit");
                 userMap.put("Doctor", patientDoctor.getName());
                 userMap.put("Doctor ID", patientDoctor.getId());
                 userMap.put("Name", user.getDisplayName());

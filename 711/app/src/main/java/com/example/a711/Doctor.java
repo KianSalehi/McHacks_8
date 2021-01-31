@@ -45,7 +45,7 @@ public class Doctor {
     }
     public void renewPrescription(Patient patient, Prescription prescription, LocalDate date){
         LocalDate today = LocalDate.now();
-        Prescription newPrescription = new Prescription(prescription.getDrug(),today,date,this);
+        Prescription newPrescription = new Prescription(prescription.getDrug(),today.toString(),date.toString(),name);
         patient.getMedicalRecord().addPrescription(newPrescription);
     }
     public void newPrescription(Prescription prescription, Patient patient){
