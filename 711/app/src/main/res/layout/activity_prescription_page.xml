@@ -36,10 +36,9 @@
         android:textSize="30sp"
         app:layout_constraintBottom_toTopOf="@+id/PrescriptionPageGoBack"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.202" />
+        app:layout_constraintVertical_bias="0.297" />
 
     <TextView
         android:id="@+id/PrescriptionPageDetails"
@@ -51,4 +50,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PrescriptionPageTitle"
         app:layout_constraintVertical_bias="0.569" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="195dp"
+        android:layout_height="124dp"
+        app:layout_constraintBottom_toTopOf="@+id/PrescriptionPageTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/syrup" />
 </androidx.constraintlayout.widget.ConstraintLayout>

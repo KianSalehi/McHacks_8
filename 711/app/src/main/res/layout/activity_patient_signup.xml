@@ -8,32 +8,65 @@
     android:background="@drawable/gradient_background"
     >
 
-    <Button
-        android:id="@+id/PatientSignupButton"
+    <EditText
+        android:id="@+id/PatientSignupFirstLastName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        android:text="SIGNUP"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
         android:textColor="#000000"
-        android:textColorLink="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColorHint="#000000"
+        android:textColorLink="#03A9F4"
+        android:textCursorDrawable="@android:color/holo_blue_dark"
+        app:layout_constraintBottom_toTopOf="@+id/PatientSignUpEmailText"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.713" />
+        app:layout_constraintVertical_bias="0.992" />
 
-    <EditText
-        android:id="@+id/PatientSignupPass"
+    <TextView
+        android:id="@+id/PatientSignupFirestLastNameText"
+        android:layout_width="181dp"
+        android:layout_height="25dp"
+        android:text="First and Last Name"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/PatientSignupFirstLastName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9" />
+
+    <TextView
+        android:id="@+id/PatientSignupPassText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/PatientSignupButton"
+        android:text="Password"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/PatientSignupPass"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientSignupEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/PatientSignupEmail"
+        app:layout_constraintVertical_bias="0.423" />
+
+    <TextView
+        android:id="@+id/PatientSignUpEmailText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="#000000"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/PatientSignupEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.144"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.979" />
 
     <EditText
         android:id="@+id/PatientSignupEmail"
@@ -49,70 +82,38 @@
         android:textCursorDrawable="@android:color/holo_blue_dark"
         app:layout_constraintBottom_toTopOf="@+id/PatientSignupButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintHorizontal_bias="0.507"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.41" />
-
-    <TextView
-        android:id="@+id/PatientSignUpEmailText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Email"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/PatientSignupEmail"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.141"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.974" />
-
-    <TextView
-        android:id="@+id/PatientSignupPassText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/PatientSignupPass"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.048"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/PatientSignupEmail"
-        app:layout_constraintVertical_bias="0.423" />
-
-    <TextView
-        android:id="@+id/PatientSignupFirestLastNameText"
-        android:layout_width="181dp"
-        android:layout_height="25dp"
-        android:text="First and Last Name"
-        android:textColor="#000000"
-        android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/PatientSignupFirstLastName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.069"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.867" />
+        app:layout_constraintVertical_bias="0.53" />
 
     <EditText
-        android:id="@+id/PatientSignupFirstLastName"
+        android:id="@+id/PatientSignupPass"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        android:textColorLink="#03A9F4"
-        android:textCursorDrawable="@android:color/holo_blue_dark"
-        app:layout_constraintBottom_toTopOf="@+id/PatientSignUpEmailText"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/PatientSignupButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.507"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/PatientSignupEmail" />
+
+    <Button
+        android:id="@+id/PatientSignupButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:text="SIGNUP"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+        android:textColor="#000000"
+        android:textColorLink="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.99" />
+        app:layout_constraintVertical_bias="0.805" />
 
     <TextView
         android:id="@+id/PatientSignupLogin"
@@ -123,7 +124,30 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/PatientSignupButton"
-        app:layout_constraintVertical_bias="0.305" />
+        app:layout_constraintVertical_bias="0.486" />
+
+    <ImageView
+        android:id="@+id/imageView8"
+        android:layout_width="204dp"
+        android:layout_height="172dp"
+        app:layout_constraintBottom_toTopOf="@+id/PatientSignupFirestLastNameText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/nurse" />
+
+    <ImageView
+        android:id="@+id/imageView10"
+        android:layout_width="90dp"
+        android:layout_height="86dp"
+        app:layout_constraintBottom_toBottomOf="@+id/PatientSignupButton"
+        app:layout_constraintEnd_toStartOf="@+id/PatientSignupButton"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/PatientSignupButton"
+        app:layout_constraintVertical_bias="0.736"
+        app:srcCompat="@drawable/healthcare" />
 </androidx.constraintlayout.widget.ConstraintLayout>
