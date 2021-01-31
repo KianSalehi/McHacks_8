@@ -9,8 +9,8 @@
 
     <TextView
         android:id="@+id/PatientHomePagePatientName"
-        android:layout_width="126dp"
-        android:layout_height="35dp"
+        android:layout_width="146dp"
+        android:layout_height="39dp"
         android:text="patientName"
         android:textAlignment="center"
         android:textColor="#000000"
@@ -18,7 +18,7 @@
         android:textColorHint="#000000"
         android:textColorLink="#03A9F4"
         android:textCursorDrawable="@android:color/holo_blue_dark"
-        android:textSize="18sp"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/PatientHomePageDoctorName"
         app:layout_constraintEnd_toStartOf="@+id/PatientHomePageLogout"
