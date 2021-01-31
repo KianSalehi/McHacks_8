@@ -76,7 +76,7 @@ public class ChooseADoctorAfterSignup extends AppCompatActivity implements Adapt
                 userMap.put("Doctor ID", patientDoctor.getId());
                 userMap.put("Name", user.getDisplayName());
                 userMap.put("Email", user.getEmail());
-                userMap.put("Age", null);
+                userMap.put("Age", "0");
                 db.collection("patient").document(user.getUid()).set(userMap)
                         .addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
