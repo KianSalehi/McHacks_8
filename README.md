@@ -1,4 +1,9 @@
-# McHacks_8
+# Nova Med
+![image](https://user-images.githubusercontent.com/54958095/109681081-1af59d80-7b4b-11eb-8ba3-55782dc6ad5a.png)
+![image](https://user-images.githubusercontent.com/54958095/109681123-28ab2300-7b4b-11eb-824a-8ccf7949789f.png)
+![image](https://user-images.githubusercontent.com/54958095/109681172-33fe4e80-7b4b-11eb-8f77-3f12944eb137.png)
+![image](https://user-images.githubusercontent.com/54958095/109681196-3c568980-7b4b-11eb-8de5-b6aa2e3c5d33.png)
+
 
 ## Inspiration
 In the pandemic, healthcare was one of the most important things for everybody. But on the other hand, the people with medical problems were not able to access them as the social-distancing norms and lockdowns made the process very complicated. Doctors who were taking care of COVID patients could not help other patients as it could lead to an outbreak. Therefore, a platform was required to help the patients and doctors both so that medical help could be given to everybody.
